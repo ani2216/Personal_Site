@@ -7,7 +7,7 @@ import cors from 'cors';
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:5173', 'https://personal-site-flame-eight.vercel.app'],
+  origin: ['http://localhost:5173', 'https://aniketdwivedi.vercel.app/'],
   method: "GET,POST,PUT,DELETE,PATCH,HEAD",
   credentials:true
 }
