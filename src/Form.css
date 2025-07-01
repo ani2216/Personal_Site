@@ -1,0 +1,83 @@
+.form-container{
+	width: 100%;
+	/* background-color: rgb(255,252,207); */
+	box-sizing: border-box;
+}
+
+.form-container .form-inner-container{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.form-inner-container h1{
+	font-size: 3.5rem;
+	background: linear-gradient(to right,rgb(138,114,198),rgba(0,0,0,0.2));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.form-inner-container .form{
+
+}
+
+.form input,textarea{
+	font-size: 1rem;
+	font-weight: bolder;
+	text-transform: uppercase;
+	padding: 7px;
+	border-radius: 5px;
+	border-color: transparent;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.form input[type='text']{
+	width: 70%;
+	height: 30px;
+	margin-top: 30px;
+}
+
+.form input[type='email']{
+	width: 70%;
+	height: 30px;
+	margin-top: 20px;
+}
+
+.form textarea{
+	width: 70.5%;
+	margin-top: 20px;
+	resize: none;
+	height: 250px;
+}
+
+.form .limit{
+	margin-top: 2px;
+	font-size: 0.8rem;
+	margin-left: 68%;
+}
+
+.form button{
+	width: 40%;
+	padding: 10px;
+	border-radius: 10px;
+	border-color: transparent;
+	margin: 30px 0px 50px 0px;
+	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 1rem;
+}
+
+
+@media (max-width:768px){
+	.form-inner-container h1{
+		font-size: 2.5rem;
+	}
+
+}
+
+@media (max-width:520px){
+	.form-inner-container .form input,textarea{
+		font-size: 0.8rem;
+	}
+}

@@ -1,0 +1,11 @@
+.footer{
+	width: 100%;
+	box-sizing: border-box;
+	background-color: rgb(138,114,198);
+	text-align: center;
+	padding: 3px;
+}
+
+.footer p{
+	color: rgb(255,252,207);
+}

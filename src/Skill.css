@@ -1,0 +1,90 @@
+.skill-container{
+	width: 100%;
+	box-sizing: border-box;
+	background-color: rgb(138,114,198);
+	overflow-x: hidden;
+}
+
+.skill-container .skill-inner-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.skill-inner-container h1{
+	font-size: 3.5rem;
+	background: linear-gradient(to right, rgb(255,252,207),rgba(255,252,207,0.5));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 50px 0px 0px 0px;
+}
+
+.skill-inner-container p{
+	width: 1000px;
+	text-align: center;
+	color: rgb(253, 253, 249);
+	font-size: 1.2rem;
+}
+
+.skill-inner-container .skill-section{
+	/* width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	row-gap: 20px;
+	place-items: center;
+	margin-top: 50px;
+	margin-bottom: 50px; */
+	width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  place-items: center;
+  margin: 50px 0;
+  padding: 0 20px;
+}
+
+.skill-section .card{
+	width: 200px;
+	height: fit-content;
+	text-align: center;
+}
+
+.skill-section .card img{
+	width: 50px;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.skill-section .card h3{
+	color: rgb(253, 253, 249);
+	margin-top: 0px;
+}
+
+.skill-section .card .skill-bar{
+	width: 100%;
+	height: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.skill-bar .bar{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255,252,207,0.5);
+	border-radius: 10px;
+}
+
+.bar span{
+	justify-content: right;
+	color: rgb(138,114,198);
+	font-weight: bolder;
+	background-color:rgb(253, 253, 249);
+}
+
+@media (max-width:768px){
+	.skill-inner-container h1{
+		font-size: 2.5rem;
+	}
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "degree": "M.Tech - Computational Biology",
+    "college": "IIIT Delhi",
+    "subject": ["Machine Learning", "NLP", "AI"],
+    "para": "Pursuing advanced research in Computational Biology with a strong focus on Machine Learning and Natural Language Processing. Engaged in interdisciplinary projects bridging biology and artificial intelligence.",
+    "year": "2024-2026",
+    "cgpa": 7.86
+  },
+  {
+    "degree": "B.Tech - Computer Science and Engineering",
+    "college": "PDM University, Haryana",
+    "subject": ["Java Programming", "DBMS", "Operating System", "Computer Networks"],
+    "para": "Completed a rigorous undergraduate program with core strengths in software development and system architecture. Developed multiple projects involving Java, database systems, and networking.",
+    "year": "2019-2023",
+    "cgpa": 8.8
+  },
+  {
+    "degree": "10+2",
+    "college": "Happy Public School, Delhi",
+    "subject": ["Non-Medical", "Computer Science"],
+    "para": "Built a strong foundation in mathematics, physics, and computer science. Actively participated in coding contests and science exhibitions during school years.",
+    "year": "2017-2019",
+    "cgpa": 9.0
+  }
+]

@@ -1,0 +1,95 @@
+.blog-container{
+	width: 100%;
+	box-sizing: border-box;
+	background-color: rgb(255,252,207);
+}
+
+.blog-container .blog-inner-container{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.blog-inner-container h1{
+	font-size: 3.5rem;
+	background: linear-gradient(to right, rgb(138,114,198),rgb(0,0,0,0.2));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 50px 0px 0px 0px;
+}
+
+.blog-inner-container .blog-card-container{
+	margin: 50px;
+	display: flex;
+	flex-direction: row;
+	height: 550px;
+}
+
+.blog-card-container .blog-card-info{
+	width: 80%;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.5);
+	padding: 5px;
+	overflow-y: scroll;
+}
+
+.blog-card-info::-webkit-scrollbar{
+	display: none;
+}
+
+.blog-card-info img{
+	width: 90%;
+	height: 300px;
+	border-radius: 20px;
+}
+
+.blog-card-info p{
+	text-align: left;
+}
+
+.blog-card-container .blog-card{
+	width: 30%;
+	padding: 5px;
+	background-color: white;
+	margin-left: 20px;
+	border-radius: 20px;
+}
+
+.blog-card .card{
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.card::-webkit-scrollbar{
+	display: none;
+}
+
+.blog-card .card .card-info{
+	width: 100%;
+	height: fit-content;
+	margin-bottom: 30px;
+	border-radius: 20px;
+	padding-bottom: 5px;
+	background-color: rgb(255,252,207,0.5);
+}
+
+.blog-card .card .card-info:hover{
+	cursor: pointer;
+}
+
+.blog-card .card .active{
+	background-color: rgb(138,114,198);
+	color: rgb(255,252,207);
+}
+
+.blog-card .card .card-info img{
+	width: 100%;
+	height: 200px;
+	border-radius: 20px;
+}
+
+.blog-card .card .card-info p{
+	text-align: left;
+	width: 100%;
+	margin: 10px 0px 0px 10px;
+}

@@ -1,0 +1,111 @@
+.education-container{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.education-container .education-inner-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 50px 0px 0px 0px;
+}
+
+.education-inner-container h1{
+	font-size: 3.5rem;
+	background: linear-gradient(to right,rgb(138,114,198),rgba(0,0,0,0.2));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.education-inner-container .education-section{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+}
+
+.education-section .card{
+	width: 80%;
+	height: fit-content;
+	padding: 10px;
+	background-color: rgb(255,255,255,0.5);
+	border-radius: 10px;
+	opacity: 0;
+	scale: 0.5;
+	transition: all 0.3s ease-in-out;
+}
+
+.education-section .card.show{
+	opacity: 1;
+	scale: 1;
+}
+
+.education-section .card h1{
+	font-size: 2rem !important;
+	color: rgb(138,114,198) !important; 
+	margin: 0px;
+}
+
+.education-section .card h2{
+	font-size: 1.6rem;
+	color: rgb(138,114,198,0.8);
+	margin: 0px;
+}
+
+.education-section .card h3{
+	font-size: 1.2rem;
+	margin: 15px 0px 0px 0px;
+	color: rgb(138,114,198,0.6);
+}
+
+.education-section .card span{
+	background-color: rgb(138,114,198);
+	color: rgb(255,252,207);
+	font-size: 1rem;
+	margin-right: 20px;
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
+}
+
+.education-section .card p{
+	font-size: 1rem;
+	margin: 15px 0px 0px 0px;
+	color: rgb(138,114,198,0.6);
+}
+
+.education-section .card .card-section{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0px;
+}
+
+.education-section .card .card-section p{
+	background-color: rgb(138,114,198);
+	color: rgb(255,252,207);
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
+}
+
+@media (max-width:1026px){
+	.education-section .card{
+		margin: 0px 20px 0px 20px;
+	}
+	
+	.education-section .card h1{
+		font-size: 1.5rem !important;
+	}
+}
+
+@media (max-width:700px){
+	.education-inner-container h1{
+		font-size: 2.5rem;
+	}
+
+	.education-section .card span{
+		display: block;
+		width: fit-content;
+		margin-top: 10px;
+	}
+}
