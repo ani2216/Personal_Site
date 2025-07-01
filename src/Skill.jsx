@@ -7,7 +7,7 @@ function Skill({ref}){
 
   const getServices = async() => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/skills", {
+      const response = await fetch("https://personal-site-7d6r.onrender.com/api/auth/skills", {
         method: "GET",
       });
 

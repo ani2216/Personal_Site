@@ -3,12 +3,15 @@ import dotenv from "dotenv"
 
 dotenv.config();
 
-const URI = process.env.MONGODB_URI;
+// const URI = process.env.MONGODB_URI;
 // console.log(URI);
 
 const connectdb = async()=>{
 	try {
-		await mongoose.connect(URI);
+		await mongoose.connect(process.env.MONGODB_URI,{
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 		console.log("Database Connected!")
 	} catch (error) {
 		console.log(error);
