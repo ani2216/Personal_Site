@@ -9,6 +9,17 @@ function Project({ref}){
 	const [services, setServices] = useState([]);
 	const [loading, setLoading] = useState(true);
 
+	useEffect(() => {
+    const cachedData = localStorage.getItem('projects');
+  if (cachedData) {
+    setServices(JSON.parse(cachedData));
+    setLoading(false);
+		getServices();
+  } else {
+    getServices();
+  }
+  }, []);
+
   const getServices = async() => {
     try {
       const response = await fetch("https://personal-site-7d6r.onrender.com/api/auth/projects", {
@@ -27,10 +38,6 @@ function Project({ref}){
       setLoading(false); 
     }
   };
-
-  useEffect(() => {
-    getServices();
-  }, []);
 
 	return(
 		<div className="project-container">
