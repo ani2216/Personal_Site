@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 function Skill({ref}){
 
   const [services, setServices] = useState([]);
+	const [loading, setLoading] = useState(true);
 
   const getServices = async() => {
     try {
@@ -18,6 +19,9 @@ function Skill({ref}){
     } catch (error) {
       console.error("Error fetching services:", error);
     }
+		finally {
+      setLoading(false); 
+    }
   };
 
   useEffect(() => {
@@ -28,7 +32,13 @@ function Skill({ref}){
 		<div className="skill-container">
 			<div className="skill-inner-container" ref={ref}>
 				<h1>Skills</h1>
-				{/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum quo velit aspernatur accusamus? Saepe ipsa maiores sapiente ipsum a!</p> */}
+				{loading ? (
+          <div className="loader">
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+        ) : (
 				<div className="skill-section">
 					{services.map((label,index)=>(
 					<div className="card" key={index}>
@@ -42,6 +52,7 @@ function Skill({ref}){
 					</div>
 					))}
 				</div>
+				)}
 			</div>
 		</div>
 	)
