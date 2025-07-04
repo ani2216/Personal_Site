@@ -7,6 +7,7 @@ function Project({ref}){
 
 
 	const [services, setServices] = useState([]);
+	const [loading, setLoading] = useState(true);
 
   const getServices = async() => {
     try {
@@ -22,6 +23,9 @@ function Project({ref}){
     } catch (error) {
       console.error("Error fetching services:", error);
     }
+		finally {
+      setLoading(false); 
+    }
   };
 
   useEffect(() => {
@@ -32,6 +36,13 @@ function Project({ref}){
 		<div className="project-container">
 			<div className="project-inner-container" ref={ref}>
 				<h1>Projects</h1>
+				{loading ? (
+          <div className="loader">
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+        ) : (
 				<div className="project-section">
 					{services.map((label,key)=>(
 					<div className="project-content" key={key}>
@@ -46,6 +57,7 @@ function Project({ref}){
 					</div>
 					))}
 				</div>
+				)}
 			</div>
 		</div>
 	)
