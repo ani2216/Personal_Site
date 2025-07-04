@@ -5,7 +5,7 @@ function MainBody(){
 
 	const gmailId = "ani22ket16@gmail.com";
 	const handleResume = () => {
-  window.open("https://drive.google.com/file/d/1s3f7fPVyzo7HHsXOcXfRY7bPcfngK0Ao/view?usp=sharing", "_blank");
+  window.open("https://drive.google.com/file/d/1EvFYzbUQXLpg-60S0-ekRcPG3D0J5izm/view?usp=sharing", "_blank");
 	};
 
 
