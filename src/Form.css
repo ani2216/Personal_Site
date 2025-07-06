@@ -20,6 +20,28 @@
 
 }
 
+.success-toast {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: rgb(138,114,198);  
+  color: rgb(253, 253, 249);
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fadeInOut 3s ease forwards;
+	font-size: 1.2rem;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
 .form input,textarea{
 	font-size: 1rem;
 	font-weight: bolder;

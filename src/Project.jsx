@@ -8,6 +8,11 @@ function Project({ref}){
 
 	const [services, setServices] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [isExpanded, setIsExpanded] = useState(false);
+
+	const handleToggle = () => {
+    setIsExpanded(!isExpanded);
+  };
 
 	useEffect(() => {
     const cachedData = localStorage.getItem('projects');
@@ -50,13 +55,14 @@ function Project({ref}){
             <span className="dot"></span>
           </div>
         ) : (
-				<div className="project-section">
-					{services.map((label,key)=>(
+				<div className={`project-section ${isExpanded ? "expanded" : ""}`} onClick={handleToggle} >
+					{services.sort((a, b) => b.bool - a.bool).map((label,key)=>(
 					<div className="project-content" key={key}>
 						{label.bool && <p className='new'>New</p>}
-						<img src={label.image} alt="" />
+						{/* <img src={label.image} alt="" /> */}
 						<div className="project-description">
 							<h3>{label.name}</h3>
+							<p>{label.description}</p>
 							<a href={label.link} className='fa fa-github' title='Github' target='_blank'>
 								<span>Know More</span>
 							</a>

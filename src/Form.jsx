@@ -8,7 +8,7 @@ function Form({ref}){
 		email:"",
 		message:""
 	});
-
+	const [successMessage, setSuccessMessage] = useState(false);
 
 	const max_limit = 2500
   const handleChange = (e) => {
@@ -36,8 +36,10 @@ function Form({ref}){
 		});
 
 		if (response.ok) {
-			alert("Message sent successfully!");
+			// alert("Message sent successfully!");
+			setSuccessMessage(true);
 			setUser({ name: "", email: "", message: "" });
+			setTimeout(() => setSuccessMessage(false), 3000);
 		} else {
 			alert("Failed to send message.");
 		}
@@ -61,6 +63,11 @@ function Form({ref}){
 						<button type="submit">Submit</button>
 					</form>
 				</div>
+				{successMessage && (
+        <div className="success-toast">
+          ✅ Message Sent Successfully!
+        </div>
+      )}
 			</div>
 		</div>
 	)	
