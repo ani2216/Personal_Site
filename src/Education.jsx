@@ -10,7 +10,7 @@ function Education({ref}){
     "subject": ["Machine Learning", "NLP", "AI"],
     "para": "Pursuing advanced research in Computational Biology with a strong focus on Machine Learning and Natural Language Processing. Engaged in interdisciplinary projects bridging biology and artificial intelligence.",
     "year": "2024-2026",
-    "cgpa": 7.86
+    "cgpa": 8.06
   },
   {
     "degree": "B.Tech - Computer Science and Engineering",
